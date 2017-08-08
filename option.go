@@ -5,7 +5,7 @@ import (
 	"fmt"
 	"reflect"
 	"strings"
-	"syscall"
+//	"syscall"
 	"unicode/utf8"
 )
 
@@ -260,6 +260,7 @@ func (option *Option) empty() {
 func (option *Option) clearDefault() {
 	usedDefault := option.Default
 
+/*
 	if envKey := option.EnvDefaultKey; envKey != "" {
 		// os.Getenv() makes no distinction between undefined and
 		// empty values, so we use syscall.Getenv()
@@ -272,7 +273,7 @@ func (option *Option) clearDefault() {
 			}
 		}
 	}
-
+*/
 	option.isSetDefault = true
 
 	if len(usedDefault) > 0 {

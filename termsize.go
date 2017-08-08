@@ -3,8 +3,8 @@
 package flags
 
 import (
-	"syscall"
-	"unsafe"
+//	"syscall"
+//	"unsafe"
 )
 
 type winsize struct {
@@ -15,6 +15,7 @@ type winsize struct {
 func getTerminalColumns() int {
 	ws := winsize{}
 
+/*
 	if tIOCGWINSZ != 0 {
 		syscall.Syscall(syscall.SYS_IOCTL,
 			uintptr(0),
@@ -23,6 +24,7 @@ func getTerminalColumns() int {
 
 		return int(ws.col)
 	}
+*/
 
 	return 80
 }
